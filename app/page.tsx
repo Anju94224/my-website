@@ -5,6 +5,7 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Projects from '@/components/Projects';
+import ScrollProgress from '@/components/ScrollProgress';
 import Skills from '@/components/Skills';
 import { useEffect, useState } from 'react';
 
@@ -20,14 +21,29 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-blue-500 flex flex-col items-center justify-start gap-12 px-4 py-6 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-blue-500 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex flex-col items-center justify-start gap-12 px-4 py-6 relative overflow-hidden" id="home">
       {/* Decorative Background Elements */}
+      <ScrollProgress />
       <Navbar />
-      <About />      
-      <Skills /> 
+      <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 shadow-2xl max-w-xl w-full text-center text-white animate-fade-in">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+          Amna Noor
+        </h1>
+        <p className="text-lg md:text-xl mb-10 opacity-95 leading-relaxed">
+          Full-Stack Developer crafting beautiful, scalable web solutions
+        </p>
+        <a 
+          href="#projects"
+          className="inline-block bg-white text-purple-600 font-semibold py-3 px-10 rounded-full shadow-lg hover:shadow-purple-500/50 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/30 active:scale-95"
+        >
+          View My Work
+        </a>
+      </div>
+      <About />
+      <Skills />
       <Projects />
       <Contact />
-      <Footer />
+      <Footer />git add .
       <div  
         className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-float" 
         aria-hidden="true"
@@ -64,11 +80,6 @@ export default function Home() {
           View My Work
         </a>
       </div>
-      <section id="projects" className="min-h-screen flex items-center justify-center px-4 py-20">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">Projects Coming Soon</h2>
-        </div>
-      </section>
     </div>
   );
 }
