@@ -42,8 +42,7 @@ export default function Home() {
       <About />
       <Skills />
       <Projects />
-      <Contact />
-      <Footer />git add .
+      <Contact />      <Footer />git add .
       <div  
         className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-float" 
         aria-hidden="true"
@@ -64,22 +63,6 @@ export default function Home() {
         className="absolute top-1/2 left-1/4 w-28 h-28 bg-purple-400/10 rounded-full blur-2xl animate-float" 
         aria-hidden="true"
       ></div>
-
-      {/* Glassmorphism Card */}
-      <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 shadow-2xl max-w-xl w-full text-center text-white animate-fade-in">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-          Amna Noor
-        </h1>
-        <p className="text-lg md:text-xl mb-10 opacity-95 leading-relaxed">
-          Full-Stack Developer crafting beautiful, scalable web solutions
-        </p>
-        <a 
-          href="#projects"
-          className="inline-block bg-white text-purple-600 font-semibold py-3 px-10 rounded-full shadow-lg hover:shadow-purple-500/50 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/30 active:scale-95"
-        >
-          View My Work
-        </a>
-      </div>
     </div>
   );
 }
