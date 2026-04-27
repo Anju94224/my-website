@@ -6,18 +6,24 @@ const projects = [
     description: "My personal portfolio built with Next.js and Tailwind CSS.",
     tags: ["Next.js", "Tailwind", "Vercel"],
     color: "bg-purple-100",
+    github: "https://github.com/Anju94224/portfolio-website",
+    demo: "https://portfolio-website-git-main-amna-noor-s-projects.vercel.app",
   },
   {
     title: "Todo App",
     description: "A full-stack todo app with create, update and delete functionality.",
     tags: ["React", "Node.js", "MongoDB"],
     color: "bg-green-100",
+    github: "https://github.com/Anju94224",
+    demo: "#",
   },
   {
     title: "Weather App",
     description: "A weather app that fetches real-time data from an API.",
     tags: ["JavaScript", "API", "CSS"],
     color: "bg-sky-100",
+    github: "https://github.com/Anju94224",
+    demo: "#",
   },
 ];
 
@@ -55,18 +61,8 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                  <a
-                    href="#"
-                    className="inline-flex w-full items-center justify-center rounded-full bg-slate-900 dark:bg-gray-700 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 dark:hover:bg-gray-600 sm:w-auto"
-                  >
-                    GitHub
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex w-full items-center justify-center rounded-full bg-purple-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-purple-700 sm:w-auto"
-                  >
-                    Live Demo
-                  </a>
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center rounded-full bg-slate-900 dark:bg-gray-700 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 sm:w-auto">GitHub</a>
+                  <a href={project.demo} target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center rounded-full bg-purple-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-purple-700 sm:w-auto">Live Demo</a>
                 </div>
               </div>
             </motion.article>

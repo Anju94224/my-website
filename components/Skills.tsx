@@ -1,3 +1,4 @@
+'use client';
 import { motion } from 'framer-motion';
 
 const skills = [
@@ -15,13 +16,7 @@ const skills = [
 export default function Skills() {
   return (
     <section id="skills" className="bg-slate-50 dark:bg-gray-900 py-20 px-4 md:px-8">
-      <motion.div
-        className="mx-auto max-w-6xl"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
+      <motion.div className="mx-auto max-w-6xl" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
         <div className="text-center mb-12">
           <p className="text-sm uppercase tracking-[0.35em] text-purple-600">Skills</p>
           <h2 className="mt-4 text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">My Skills</h2>
@@ -30,19 +25,14 @@ export default function Skills() {
           {skills.map((skill) => (
             <div key={skill.name} className="rounded-3xl bg-white dark:bg-gray-800 p-6 shadow-sm ring-1 ring-slate-200 dark:ring-gray-700">
               <div className="flex items-center gap-4 mb-5">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-50 dark:bg-purple-900/20 text-2xl">
-                  {skill.icon}
-                </div>
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-50 dark:bg-purple-900/20 text-2xl">{skill.icon}</div>
                 <div>
                   <p className="text-lg font-semibold text-slate-900 dark:text-white">{skill.name}</p>
                   <p className="text-sm text-slate-500 dark:text-gray-400">{skill.level}% proficiency</p>
                 </div>
               </div>
               <div className="rounded-full bg-slate-100 dark:bg-gray-700 h-3 overflow-hidden">
-                <div
-                  className="h-full rounded-full bg-purple-600 transition-all duration-500"
-                  style={{ width: `${skill.level}%` }}
-                />
+                <div className="h-full rounded-full bg-purple-600 transition-all duration-500" style={{ width: `${skill.level}%` }} />
               </div>
             </div>
           ))}

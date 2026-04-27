@@ -42,7 +42,7 @@ export default function Home() {
       <About />
       <Skills />
       <Projects />
-      <Contact />      <Footer />git add .
+      <Contact />      <Footer />
       <div  
         className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-float" 
         aria-hidden="true"
