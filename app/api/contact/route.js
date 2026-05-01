@@ -3,8 +3,6 @@ import connectDB from "@/lib/mongodb";
 import mongoose from "mongoose";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // Contact Schema
 const contactSchema = new mongoose.Schema({
   name: String,
@@ -22,6 +20,13 @@ export async function POST(request) {
 
     const body = await request.json();
     const { name, email, message } = body;
+
+    const resendApiKey = process.env.RESEND_API_KEY;
+    if (!resendApiKey) {
+      throw new Error("Missing RESEND_API_KEY in environment variables");
+    }
+
+    const resend = new Resend(resendApiKey);
 
     // 1. Save to MongoDB
     const newContact = await Contact.create({
