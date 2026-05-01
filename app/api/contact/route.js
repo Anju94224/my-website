@@ -32,7 +32,7 @@ export async function POST(request) {
 
     // 2. Send email notification to you
     await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "Amna Noor <onboarding@resend.dev>",
       to: "itsmenoor20@gmail.com", 
       subject: `New Contact Form Message from ${name}`,
       html: `
