@@ -28,12 +28,18 @@ export async function POST(request) {
     });
 
     try {
-      const { Resend } = await import("resend");
-      const resend = new Resend(process.env.RESEND_API_KEY);
+      const nodemailer = await import("nodemailer");
+      const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: process.env.GMAIL_USER,
+          pass: process.env.GMAIL_APP_PASSWORD,
+        },
+      });
 
-      await resend.emails.send({
-        from: "onboarding@resend.dev",
-        to: "itsmenoor20@gmail.com",
+      await transporter.sendMail({
+        from: process.env.GMAIL_USER,
+        to: process.env.GMAIL_USER,
         subject: `New Contact Form Message from ${name}`,
         html: `
           <h2>New message from your portfolio!</h2>
