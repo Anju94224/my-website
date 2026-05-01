@@ -27,6 +27,25 @@ export async function POST(request) {
       message,
     });
 
+    try {
+      const { Resend } = await import("resend");
+      const resend = new Resend(process.env.RESEND_API_KEY);
+
+      await resend.emails.send({
+        from: "onboarding@resend.dev",
+        to: "itsmenoor20@gmail.com",
+        subject: `New Contact Form Message from ${name}`,
+        html: `
+          <h2>New message from your portfolio!</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Message:</strong> ${message}</p>
+        `,
+      });
+    } catch (emailError) {
+      console.error("CONTACT EMAIL ERROR:", emailError?.message ?? emailError);
+    }
+
     return NextResponse.json(
       { success: true, data: newContact },
       { status: 201 }
