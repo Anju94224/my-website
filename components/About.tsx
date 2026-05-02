@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 
 export default function About() {
   return (
-    <section id="about" className="bg-white dark:bg-gray-900 py-20 px-4 md:px-8">
+    <section id="about" className="bg-white dark:bg-slate-900 py-20 px-4 md:px-8">
       <motion.div
-        className="mx-auto max-w-6xl rounded-[2rem] bg-white dark:bg-gray-800 p-8 shadow-xl sm:p-10 md:flex md:flex-row md:items-center md:gap-10 lg:p-16"
+        className="mx-auto max-w-6xl rounded-[2rem] bg-white dark:bg-gray-800 p-8 shadow-xl hover:scale-105 hover:shadow-xl transition-all duration-300 sm:p-10 md:flex md:flex-row md:items-center md:gap-10 lg:p-16"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}

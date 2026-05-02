@@ -29,7 +29,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-white dark:bg-gray-900 py-20 px-4 md:px-8">
+    <section id="projects" className="bg-white dark:bg-slate-900 py-20 px-4 md:px-8">
       <motion.div
         className="mx-auto max-w-6xl"
         initial={{ opacity: 0, y: 50 }}
@@ -45,7 +45,7 @@ export default function Projects() {
           {projects.map((project) => (
             <motion.article
               key={project.title}
-              className="overflow-hidden rounded-3xl border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-xl"
+              className="overflow-hidden rounded-3xl border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-xl hover:scale-105 transition-all duration-300"
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >

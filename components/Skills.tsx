@@ -15,7 +15,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-slate-50 dark:bg-gray-900 py-20 px-4 md:px-8">
+    <section id="skills" className="bg-slate-50 dark:bg-slate-900 py-20 px-4 md:px-8">
       <motion.div className="mx-auto max-w-6xl" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
         <div className="text-center mb-12">
           <p className="text-sm uppercase tracking-[0.35em] text-purple-600">Skills</p>
@@ -23,7 +23,7 @@ export default function Skills() {
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill) => (
-            <div key={skill.name} className="rounded-3xl bg-white dark:bg-gray-800 p-6 shadow-sm ring-1 ring-slate-200 dark:ring-gray-700">
+            <div key={skill.name} className="rounded-3xl bg-white dark:bg-gray-800 p-6 shadow-sm ring-1 ring-slate-200 dark:ring-gray-700 hover:scale-105 hover:shadow-xl transition-all duration-300">
               <div className="flex items-center gap-4 mb-5">
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-50 dark:bg-purple-900/20 text-2xl">{skill.icon}</div>
                 <div>

@@ -19,7 +19,7 @@ const navItems: NavItem[] = [
 export default function Navbar() {
   const [activeLink, setActiveLink] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,11 +88,11 @@ export default function Navbar() {
 
         <div className="flex items-center gap-4">
           <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
             className="hidden md:flex items-center justify-center rounded-full border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-2 text-slate-700 dark:text-gray-300 shadow-sm transition hover:bg-slate-50 dark:hover:bg-gray-700"
             aria-label="Toggle theme"
           >
-            {theme === "dark" ? "☀️" : "🌙"}
+            {resolvedTheme === "dark" ? "🌙" : "☀️"}
           </button>
 
           <button

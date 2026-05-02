@@ -21,11 +21,11 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-blue-500 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex flex-col items-center justify-start gap-12 px-4 py-6 relative overflow-hidden" id="home">
+    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-blue-500 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 flex flex-col items-center justify-start gap-12 px-4 py-6 relative overflow-hidden" id="home">
       {/* Decorative Background Elements */}
       <ScrollProgress />
       <Navbar />
-      <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 shadow-2xl max-w-xl w-full text-center text-white animate-fade-in">
+      <div className="bg-white/25 backdrop-blur-xl border-2 border-white/40 border-t-white rounded-3xl p-8 md:p-12 shadow-2xl mt-10 max-w-xl w-full text-center text-white animate-fade-in">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
           Amna Noor
         </h1>

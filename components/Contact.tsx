@@ -46,7 +46,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-slate-50 dark:bg-gray-900 py-20 px-4 md:px-8">
+    <section id="contact" className="bg-slate-50 dark:bg-slate-900 py-20 px-4 md:px-8">
       <motion.div
         className="mx-auto max-w-4xl"
         initial={{ opacity: 0, y: 50 }}
@@ -133,32 +133,6 @@ export default function Contact() {
             {loading ? 'Sending...' : 'Send Message'}
           </button>
         </form>
-
-        <div className="mt-16 grid gap-6 sm:grid-cols-3">
-          <div className="flex flex-col items-center text-center">
-            <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900/20 text-2xl">
-              📧
-            </div>
-            <p className="text-sm font-semibold text-slate-900 dark:text-white">Email</p>
-            <p className="text-sm text-slate-600 dark:text-gray-300">amnanoor@email.com</p>
-          </div>
-
-          <div className="flex flex-col items-center text-center">
-            <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900/20 text-2xl">
-              🐙
-            </div>
-            <p className="text-sm font-semibold text-slate-900 dark:text-white">GitHub</p>
-            <p className="text-sm text-slate-600 dark:text-gray-300">github.com/Anju94224</p>
-          </div>
-
-          <div className="flex flex-col items-center text-center">
-            <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900/20 text-2xl">
-              📍
-            </div>
-            <p className="text-sm font-semibold text-slate-900 dark:text-white">Location</p>
-            <p className="text-sm text-slate-600 dark:text-gray-300">Islamabad, Pakistan</p>
-          </div>
-        </div>
       </motion.div>
     </section>
   );
