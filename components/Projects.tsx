@@ -11,11 +11,11 @@ const projects = [
   },
   {
     title: "Todo App",
-    description: "A full-stack todo app with create, update and delete functionality.",
+    description: "A full-stack todo app with add, complete, and delete functionality. Data persists in MongoDB.",
     tags: ["React", "Node.js", "MongoDB"],
     color: "bg-green-100",
-    github: "https://github.com/Anju94224",
-    demo: "#",
+    github: "https://github.com/Anju94224/todo-app",
+    demo: "https://todo-app-seven-gray-70.vercel.app",
   },
   {
     title: "Weather App",
