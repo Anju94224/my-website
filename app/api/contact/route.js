@@ -50,6 +50,10 @@ export async function POST(request) {
       });
     } catch (emailError) {
       console.error("CONTACT EMAIL ERROR:", emailError?.message ?? emailError);
+      return NextResponse.json(
+        { success: true, data: newContact, emailError: emailError?.message ?? String(emailError) },
+        { status: 201 }
+      );
     }
 
     return NextResponse.json(
