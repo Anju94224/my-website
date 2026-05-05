@@ -8,14 +8,13 @@ type NavItem = {
   href: string;
 };
 
-const navItems: NavItem[] = [
+const navItems = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
-
 export default function Navbar() {
   const [activeLink, setActiveLink] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
