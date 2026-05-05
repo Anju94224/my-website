@@ -19,11 +19,11 @@ const projects = [
   },
   {
     title: "Weather App",
-    description: "A weather app that fetches real-time data from an API.",
-    tags: ["JavaScript", "API", "CSS"],
+    description: "A real-time weather app that shows temperature, humidity, wind speed and more for any city worldwide. Built with Next.js and OpenWeatherMap API.",
+    tags: ["Next.js", "API", "Tailwind CSS"],
     color: "bg-sky-100",
-    github: "https://github.com/Anju94224",
-    demo: "#",
+    github: "https://github.com/Anju94224/weather-app",
+    demo: "https://weather-app-opal-seven-92.vercel.app",
   },
 ];
 
